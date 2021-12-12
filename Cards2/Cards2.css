@@ -1,0 +1,110 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:#2C3841;
+    overflow: visible;
+}
+
+.contenant{
+    display:grid;
+    overflow: hidden;
+    grid-template-columns: 300px;
+    grid-template-rows:200px 145px 200px;
+    grid-template-areas:"image" "text" "commentaire";
+
+    font-family: noto;
+    border-radius:20px;
+    background:cornsilk;
+    box-shadow:3px 5px 25px black;
+    text-align: center;
+}
+
+
+
+img .rounded-radius {
+
+    grid-area: image;
+    border-top-left-radius: 29px;
+    border-top-right-radius: 29px;
+    background-size: cover;
+}
+
+.text{
+    grid-area: text;
+    margin: 25px;
+}
+.text .date{
+    color:#ff1497;
+    font-size:13px;
+    
+}
+.text p {
+    color: lightgrey;
+    font-size:15px;
+    font-weight:normal;}
+
+.text h1 {
+    margin-top:1px;
+    font-size:25px;
+}
+.contenant .commentaire{
+    margin-left:-10% ;
+    width:300px;
+    height:100px;
+}
+
+
+
+
+.commentaire{
+    grid-area: commentaire;
+    grid-auto-columns: auto;
+    display:grid;
+    grid-template-columns:1fr  1fr 1fr;
+    grid-template-rows: 1fr ;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background:#ff1497;
+    
+}
+
+.commentaire .entête{
+    display:grid;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    padding:10px;
+    color:bisque;
+
+}
+
+.commentaire .lecture{
+    font-size:0.7em;
+    font-weight: normal;
+    text-transform: capitalize;
+}
+
+.commentaire .valeur{
+    font-size:1.1em;
+    font-weight:medium;
+
+}
+
+.commentaire .bordure{
+        border-left:1px solid #f84baa;;
+        border-right:1px solid #f84baa;;
+
+
+}
+
+.commentaire .valeur sup{
+    font-size:1.1em;
+
+}
+.contenant:hover{
+    transform:scale(1.2);
+    box-shadow: 4px 2px 3px black;
+}
